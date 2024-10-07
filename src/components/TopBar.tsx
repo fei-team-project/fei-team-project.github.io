@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function TopBar() {
     return (
         <header className='grid grid-cols-3 p-2 bg-white shadow'>
-            <div>
+            <div className='flex'>
                 <Link href='/'>
                     <img src='/fei-logo.jpg' className='w-9 rounded' />
                 </Link>
