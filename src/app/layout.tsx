@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import './global.css'
 
 export const metadata: Metadata = {
-    title: 'Tímový projekt'
+    title: 'Tímový projekt',
+    description: 'Prezentačná webstránka k tímovému projektu na FEI STU'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang='en'>
+        <html lang='sk'>
             <head>
                 <link rel='icon' type='image/x-icon' href='favicon.ico' />
                 <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
