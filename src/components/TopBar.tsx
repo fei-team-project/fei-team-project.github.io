@@ -1,7 +1,13 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import NavLink from './NavLink'
+
 export default function TopBar() {
+    const currentPath = usePathname()
     return (
         <header className='grid grid-cols-3 p-2 bg-white shadow'>
             <div className='flex'>
@@ -10,21 +16,21 @@ export default function TopBar() {
                 </Link>
             </div>
             <nav className='place-self-center'>
-                <Link href='/team' className='mr-4 text-lg hover:text-fei-blue hover:underline'>
+                <NavLink href='/team' currentPath={currentPath} className='mr-4'>
                     Tím
-                </Link>
-                <Link href='/assignment' className='mr-4 text-lg hover:text-fei-blue hover:underline'>
+                </NavLink>
+                <NavLink href='/assignment' currentPath={currentPath} className='mr-4'>
                     Zadanie
-                </Link>
-                <Link href='/offer' className='mr-4 text-lg hover:text-fei-blue hover:underline'>
+                </NavLink>
+                <NavLink href='/offer' currentPath={currentPath} className='mr-4'>
                     Ponuka
-                </Link>
-                <Link href='/minutes' className='mr-4 text-lg hover:text-fei-blue hover:underline'>
+                </NavLink>
+                <NavLink href='/minutes' currentPath={currentPath} className='mr-4'>
                     Zápisnice
-                </Link>
-                <Link href='/documentation' className='text-lg hover:text-fei-blue hover:underline'>
+                </NavLink>
+                <NavLink href='/documentation' currentPath={currentPath}>
                     Dokumentácia
-                </Link>
+                </NavLink>
             </nav>
             <div></div>
         </header>
