@@ -44,7 +44,7 @@ export default function TopBar() {
         document.addEventListener('mousedown', handleClickOutsideMobileMenu)
     })
     return (
-        <header className='fixed w-full h-14 p-2 grid grid-cols-3 bg-white shadow'>
+        <header className='fixed w-screen h-14 p-2 grid grid-cols-3 bg-white shadow'>
             <div id='left-part' className='flex justify-start items-center'>
                 <Link href='/'>
                     <Image src='/fei-logo.jpg' alt='FEI logo' width='40' height='40' className='w-10' />
