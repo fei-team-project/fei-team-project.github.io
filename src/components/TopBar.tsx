@@ -58,7 +58,7 @@ export default function TopBar() {
             <div id='middle-part' className='flex justify-center items-center'>
                 <nav className='hidden sm:flex gap-4'>
                     {links.map((link) => (
-                        <NavLink href={link.href} currentPath={currentPath}>
+                        <NavLink key={link.text} href={link.href} currentPath={currentPath}>
                             {link.text}
                         </NavLink>
                     ))}
@@ -76,7 +76,7 @@ export default function TopBar() {
                     className='sm:hidden absolute right-0 top-14 bottom-0 z-10 w-1/2 p-3 flex flex-col gap-3 bg-white shadow'
                 >
                     {links.map((link) => (
-                        <NavLink href={link.href} currentPath={currentPath} className='text-lg'>
+                        <NavLink key={link.text} href={link.href} currentPath={currentPath} className='text-lg'>
                             {link.text}
                         </NavLink>
                     ))}
