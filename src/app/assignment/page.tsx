@@ -4,9 +4,9 @@ export default function AssignmentPage() {
     return (
         <div>
             <TopBar />
-            <main className='pt-10 pb-10'>
+            <main className='pt-24 pb-24'>
                 <h1 className='mb-10 text-center text-5xl'>Zadanie</h1>
-                <div className='w-3/4 mx-auto flex flex-col gap-3 text-lg'>
+                <div className='w-3/4 mx-auto flex flex-col gap-3 sm:text-lg'>
                     <p>
                         Vytvorte webovú aplikáciu, chatbot, ktorý bude vyhľadávať polovodičové súčiastky na základe dotazov
                         formulovaných voľným textom.
