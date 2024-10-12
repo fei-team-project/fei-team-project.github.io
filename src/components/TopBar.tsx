@@ -28,7 +28,7 @@ export default function TopBar() {
             prev === horizontalMobileMenuIconPath ? verticalMobileMenuIconPath : horizontalMobileMenuIconPath
         )
     }
-    function handleClickOutsideMobileMenu(event: MouseEvent) {
+    function handleClickOutsideMobileMenu(event: MouseEvent | TouchEvent) {
         const target = event.target as Node
         if (
             mobileMenu.current &&
@@ -42,6 +42,7 @@ export default function TopBar() {
     }
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutsideMobileMenu)
+        document.addEventListener('touchstart', handleClickOutsideMobileMenu)
     })
     return (
         <header className='fixed w-screen h-14 p-2 grid grid-cols-3 bg-white shadow'>
