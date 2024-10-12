@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import NavLink from './NavLink'
 
 export default function TopBar() {
-    const links = [
+    const navLinks = [
         { text: 'Tím', href: '/team' },
         { text: 'Zadanie', href: '/assignment' },
         { text: 'Ponuka', href: '/offer' },
@@ -40,16 +40,11 @@ export default function TopBar() {
             setMobileMenuIconPath(horizontalMobileMenuIconPath)
         }
     }
-    function handleScroll() {
-        setIsMobileMenuShown(false)
-        setMobileMenuIconPath(horizontalMobileMenuIconPath)
-    }
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutsideMobileMenu)
-        window.addEventListener('scroll', handleScroll)
     })
     return (
-        <header className='h-14 p-2 grid grid-cols-3 bg-white shadow'>
+        <header className='fixed w-full h-14 p-2 grid grid-cols-3 bg-white shadow'>
             <div id='left-part' className='flex justify-start items-center'>
                 <Link href='/'>
                     <Image src='/fei-logo.jpg' alt='FEI logo' width='40' height='40' className='w-10' />
@@ -57,7 +52,7 @@ export default function TopBar() {
             </div>
             <div id='middle-part' className='flex justify-center items-center'>
                 <nav className='hidden sm:flex gap-4'>
-                    {links.map((link) => (
+                    {navLinks.map((link) => (
                         <NavLink key={link.text} href={link.href} currentPath={currentPath}>
                             {link.text}
                         </NavLink>
@@ -73,13 +68,15 @@ export default function TopBar() {
                 <div
                     id='mobile-menu'
                     ref={mobileMenu}
-                    className='sm:hidden absolute right-0 top-14 bottom-0 z-10 w-1/2 p-3 flex flex-col gap-3 bg-white shadow'
+                    className='sm:hidden fixed right-0 top-14 bottom-0 z-10 w-1/2 p-5 bg-white shadow'
                 >
-                    {links.map((link) => (
-                        <NavLink key={link.text} href={link.href} currentPath={currentPath} className='text-lg'>
-                            {link.text}
-                        </NavLink>
-                    ))}
+                    <nav className='flex flex-col gap-5'>
+                        {navLinks.map((link) => (
+                            <NavLink key={link.text} href={link.href} currentPath={currentPath}>
+                                {link.text}
+                            </NavLink>
+                        ))}
+                    </nav>
                 </div>
             )}
         </header>
