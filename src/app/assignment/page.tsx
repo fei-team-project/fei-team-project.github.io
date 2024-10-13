@@ -7,7 +7,7 @@ export default function AssignmentPage() {
             <TopBar />
             <main className='pt-24'>
                 <PageTitle title='Zadanie' />
-                <div className='sm:max-w-5xl mx-auto pl-5 pr-5 pb-5 flex flex-col gap-3 sm:text-lg'>
+                <div className='sm:max-w-5xl mx-auto px-6 py-5 flex flex-col gap-3 sm:text-lg bg-white rounded'>
                     <p>
                         Vytvorte webovú aplikáciu, chatbot, ktorý bude vyhľadávať polovodičové súčiastky na základe dotazov
                         formulovaných voľným textom.
