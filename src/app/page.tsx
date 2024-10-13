@@ -8,7 +8,7 @@ export default function HomePage() {
             <TopBar />
             <main className='pb-5 flex flex-col items-center'>
                 <h1 className='mt-40 text-5xl text-center'>Tímový projekt na FEI STU 2024/25</h1>
-                <h2 className='mt-10 mb-40 text-3xl text-center'>
+                <h2 className='mt-10 mb-20 sm:mb-40 text-3xl text-center'>
                     Chatbot (GPT) na vyhľadávanie v štruktúrovaných dátach - agregovanie viacerých chatbotov
                 </h2>
                 <div className='flex justify-center items-center gap-5'>
