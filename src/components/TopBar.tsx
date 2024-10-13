@@ -65,21 +65,19 @@ export default function TopBar() {
                     <Image src={mobileMenuIconPath} alt='Menu icon' width='40' height='40' className='w-10' />
                 </button>
             </div>
-            {isMobileMenuShown && (
-                <div
-                    id='mobile-menu'
-                    ref={mobileMenu}
-                    className='sm:hidden fixed right-0 top-14 bottom-0 z-10 w-1/2 p-5 bg-white shadow'
-                >
-                    <nav className='flex flex-col gap-5'>
-                        {navLinks.map((link) => (
-                            <NavLink key={link.text} href={link.href} currentPath={currentPath}>
-                                {link.text}
-                            </NavLink>
-                        ))}
-                    </nav>
-                </div>
-            )}
+            <div
+                id='mobile-menu'
+                ref={mobileMenu}
+                className={`sm:hidden fixed right-0 top-14 bottom-0 z-10 w-1/2 p-5 bg-white shadow ${isMobileMenuShown ? 'left-1/2' : 'left-full'} duration-300`}
+            >
+                <nav className='flex flex-col gap-5'>
+                    {navLinks.map((link) => (
+                        <NavLink key={link.text} href={link.href} currentPath={currentPath}>
+                            {link.text}
+                        </NavLink>
+                    ))}
+                </nav>
+            </div>
         </header>
     )
 }
