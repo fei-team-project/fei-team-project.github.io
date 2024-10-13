@@ -13,7 +13,7 @@ export default function TopBar() {
         { text: 'Zadanie', href: '/assignment' },
         { text: 'Ponuka', href: '/offer' },
         { text: 'Zápisnice', href: '/minutes' },
-        { text: 'Dokumentácia', href: '/documentation' }
+        { text: 'Dokumentácia', href: '/documentation', target: '_blank' }
     ]
     const currentPath = usePathname()
     const mobileMenu = useRef<HTMLDivElement>(null)
@@ -54,7 +54,7 @@ export default function TopBar() {
             <div id='middle-part' className='flex justify-center items-center'>
                 <nav className='hidden sm:flex gap-4'>
                     {navLinks.map((link) => (
-                        <NavLink key={link.text} href={link.href} currentPath={currentPath}>
+                        <NavLink key={link.text} href={link.href} target={link.target} currentPath={currentPath}>
                             {link.text}
                         </NavLink>
                     ))}
