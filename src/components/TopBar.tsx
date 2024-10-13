@@ -20,13 +20,8 @@ export default function TopBar() {
     const mobileMenuButton = useRef<HTMLButtonElement>(null)
     const [isMobileMenuShown, setIsMobileMenuShown] = useState(false)
     const horizontalMobileMenuIconPath = '/menu-icon-horizontal.svg'
-    const verticalMobileMenuIconPath = '/menu-icon-vertical.svg'
-    const [mobileMenuIconPath, setMobileMenuIconPath] = useState(horizontalMobileMenuIconPath)
     function handleClickOnMobileMenuButton() {
         setIsMobileMenuShown((prev) => !prev)
-        setMobileMenuIconPath((prev) =>
-            prev === horizontalMobileMenuIconPath ? verticalMobileMenuIconPath : horizontalMobileMenuIconPath
-        )
     }
     function handleClickOutsideMobileMenu(event: MouseEvent | TouchEvent) {
         const target = event.target as Node
@@ -37,7 +32,6 @@ export default function TopBar() {
             !mobileMenuButton.current.contains(target)
         ) {
             setIsMobileMenuShown(false)
-            setMobileMenuIconPath(horizontalMobileMenuIconPath)
         }
     }
     useEffect(() => {
@@ -62,7 +56,13 @@ export default function TopBar() {
             </div>
             <div id='right-part' className='flex justify-end items-center'>
                 <button ref={mobileMenuButton} onClick={handleClickOnMobileMenuButton} className='sm:hidden'>
-                    <Image src={mobileMenuIconPath} alt='Menu icon' width='40' height='40' className='w-10' />
+                    <Image
+                        src={horizontalMobileMenuIconPath}
+                        alt='Menu icon'
+                        width='40'
+                        height='40'
+                        className={`w-10${isMobileMenuShown ? ' rotate-90' : ''} transition-transform duration-300`}
+                    />
                 </button>
             </div>
             <div
