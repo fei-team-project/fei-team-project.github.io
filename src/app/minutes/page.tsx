@@ -15,19 +15,7 @@ export default function MinutesPage() {
         { id: '9', date: '', path: '' },
         { id: '10', date: '', path: '' },
         { id: '11', date: '', path: '' },
-        { id: '12', date: '', path: '' },
-        { id: '13', date: '', path: '' },
-        { id: '14', date: '', path: '' },
-        { id: '15', date: '', path: '' },
-        { id: '16', date: '', path: '' },
-        { id: '17', date: '', path: '' },
-        { id: '18', date: '', path: '' },
-        { id: '19', date: '', path: '' },
-        { id: '20', date: '', path: '' },
-        { id: '21', date: '', path: '' },
-        { id: '22', date: '', path: '' },
-        { id: '23', date: '', path: '' },
-        { id: '24', date: '', path: '' }
+        { id: '12', date: '', path: '' }
     ]
     return (
         <div>
