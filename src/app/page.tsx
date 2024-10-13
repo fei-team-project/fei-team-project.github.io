@@ -6,9 +6,9 @@ export default function HomePage() {
     return (
         <div className='flex flex-col'>
             <TopBar />
-            <main className='pb-5 flex flex-col items-center'>
-                <h1 className='mt-40 text-5xl text-center'>Tímový projekt na FEI STU 2024/25</h1>
-                <h2 className='mt-10 mb-20 sm:mb-40 text-3xl text-center'>
+            <main className='pb-5 flex flex-col items-center px-3'>
+                <h1 className='mt-40 text-3xl md:text-5xl text-center'>Tímový projekt na FEI STU 2024/25</h1>
+                <h2 className='mt-10 mb-20 sm:mb-40 text-xl md:text-3xl text-center'>
                     Chatbot (GPT) na vyhľadávanie v štruktúrovaných dátach - agregovanie viacerých chatbotov
                 </h2>
                 <div className='flex justify-center items-center gap-5'>
