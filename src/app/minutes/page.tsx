@@ -6,7 +6,7 @@ export default function MinutesPage() {
     const minutes = [
         { date: '30.09.2024', path: '/minutes/minutes-01-2024-09-30.pdf' },
         { date: '7.10.2024', path: '/minutes/minutes-02-2024-10-07.pdf' },
-        { date: '14.10.2024', path: '' }
+        { date: '14.10.2024', path: '/minutes/minutes-03-2024-10-14.pdf' }
     ]
     return (
         <div>
