@@ -5,14 +5,14 @@ export default function Minutes({ date, path }: { date: string; path: string }) 
         <Link
             href={path ? path : '#'}
             target='_blank'
-            className='min-h-20 bg-white hover:bg-gray-50 rounded shadow flex justify-center items-center text-center sm:text-lg transition duration-100'
+            className='min-h-20 bg-white hover:opacity-70 rounded shadow flex justify-center items-center text-center sm:text-lg transition'
             title='Otvoriť zápisnicu'
         >
             {date}
         </Link>
     ) : (
         <div
-            className='min-h-20 bg-white rounded shadow flex justify-center items-center text-center sm:text-lg bg-white/40'
+            className='min-h-20 rounded shadow flex justify-center items-center text-center sm:text-lg bg-neutral-200/20'
             title='Stretnutie sa ešte neuskutočnilo'
         >
             {date}
