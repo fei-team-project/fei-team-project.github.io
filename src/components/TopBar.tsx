@@ -13,7 +13,11 @@ export default function TopBar() {
         { text: 'Zadanie', href: '/assignment' },
         { text: 'Ponuka', href: '/offer' },
         { text: 'Zápisnice', href: '/minutes' },
-        { text: 'Dokumentácia', href: '/documentation', target: '_blank' }
+        {
+            text: 'Dokumentácia',
+            href: 'https://stubask-my.sharepoint.com/:w:/g/personal/qmurinova_stuba_sk/EdNd8aIX2OdHriyP_-B-CAUBZpxmlEa5wQygSNn33h1vFQ?e=luhiq0',
+            target: '_blank'
+        }
     ]
     const currentPath = usePathname()
     const mobileMenu = useRef<HTMLDivElement>(null)
