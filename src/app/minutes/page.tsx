@@ -4,12 +4,14 @@ import TopBar from '@/components/TopBar'
 
 export default function MinutesPage() {
     const minutes = [
-        { date: '30.09.2024', path: '/minutes/minutes-01-2024-09-30.pdf' },
-        { date: '7.10.2024', path: '/minutes/minutes-02-2024-10-07.pdf' },
-        { date: '14.10.2024', path: '/minutes/minutes-03-2024-10-14.pdf' },
-        { date: '21.10.2024', path: '/minutes/minutes-04-2024-10-21.pdf' },
-        { date: '28.10.2024', path: '/minutes/minutes-05-2024-10-28.pdf' }
+        { date: '30.09.2024', path: '/minutes/minutes-2024-09-30.pdf' },
+        { date: '7.10.2024', path: '/minutes/minutes-2024-10-07.pdf' },
+        { date: '14.10.2024', path: '/minutes/minutes-2024-10-14.pdf' },
+        { date: '21.10.2024', path: '/minutes/minutes-2024-10-21.pdf' },
+        { date: '28.10.2024', path: '/minutes/minutes-2024-10-28.pdf' },
+        { date: '4.11.2024', path: '/minutes/minutes-2024-11-04.pdf' }
     ]
+
     return (
         <div>
             <TopBar />
