@@ -19,8 +19,8 @@ export default function MinutesPage() {
                 <PageTitle title='Zápisnice' />
                 <div className='max-w-5xl mx-auto flex flex-col gap-6'>
                     <div className='px-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5'>
-                        {minutes.slice(0, 12).map((minutes, i) => (
-                            <Minutes key={i} date={minutes.date} path={minutes.path} />
+                        {minutes.slice(0, 12).map((minute, i) => (
+                            <Minutes key={i} date={minute.date} path={minute.path} last={i === minutes.length - 1} />
                         ))}
                         {Array.from({ length: 12 - minutes.length }).map((_, i) => (
                             <Minutes key={minutes.length + i} date='' path='' />
@@ -28,8 +28,8 @@ export default function MinutesPage() {
                     </div>
                     <hr className='w-full' />
                     <div className='px-5 pb-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5'>
-                        {minutes.slice(12, 24).map((minutes, i) => (
-                            <Minutes key={'2' + i} date={minutes.date} path={minutes.path} />
+                        {minutes.slice(12, 24).map((minute, i) => (
+                            <Minutes key={'2' + i} date={minute.date} path={minute.path} />
                         ))}
                         {Array.from({ length: 12 - Math.min(12, minutes.slice(12, 24).length) }).map((_, i) => (
                             <Minutes key={'2' + (minutes.slice(12, 24).length + i)} date='' path='' />
