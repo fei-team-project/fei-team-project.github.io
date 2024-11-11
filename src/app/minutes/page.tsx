@@ -15,7 +15,7 @@ export default function MinutesPage() {
     return (
         <div>
             <TopBar />
-            <main className='pt-24'>
+            <main className='pt-24 overflow-x-clip'>
                 <PageTitle title='Zápisnice' />
                 <div className='max-w-5xl mx-auto flex flex-col gap-6'>
                     <div className='px-5 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5'>
