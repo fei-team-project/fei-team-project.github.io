@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './global.css'
+import TopBar from '@/components/TopBar'
 
 export const metadata: Metadata = {
     title: 'Tímový projekt',
@@ -18,7 +19,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
                 <link rel='manifest' href='/site.webmanifest' />
             </head>
-            <body className='bg-background'>{children}</body>
+            <body className='bg-background'>
+                <div>
+                    <TopBar />
+                    {children}
+                </div>
+            </body>
         </html>
     )
 }

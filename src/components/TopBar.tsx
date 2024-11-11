@@ -76,7 +76,12 @@ export default function TopBar() {
             >
                 <nav className='flex flex-col gap-5'>
                     {navLinks.map((link) => (
-                        <NavLink key={link.text} href={link.href} currentPath={currentPath}>
+                        <NavLink
+                            key={link.text}
+                            href={link.href}
+                            currentPath={currentPath}
+                            onClick={() => setIsMobileMenuShown(false)}
+                        >
                             {link.text}
                         </NavLink>
                     ))}

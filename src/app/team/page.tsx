@@ -1,6 +1,5 @@
 import PageTitle from '@/components/PageTitle'
 import TeamMemberCard from '@/components/TeamMemberCard'
-import TopBar from '@/components/TopBar'
 
 export default function TeamPage() {
     const teamMembers = [
@@ -26,16 +25,13 @@ export default function TeamPage() {
         }
     ]
     return (
-        <div>
-            <TopBar />
-            <main className='pt-24'>
-                <PageTitle title='Tím' />
-                <div className='max-w-5xl mx-auto pl-5 pr-5 pb-5 grid grid-cols-1 sm:grid-cols-2 gap-5'>
-                    {teamMembers.map((teamMember) => (
-                        <TeamMemberCard key={teamMember.name} name={teamMember.name} info={teamMember.info} />
-                    ))}
-                </div>
-            </main>
-        </div>
+        <main className='pt-24'>
+            <PageTitle title='Tím' />
+            <div className='max-w-5xl mx-auto pl-5 pr-5 pb-5 grid grid-cols-1 sm:grid-cols-2 gap-5'>
+                {teamMembers.map((teamMember) => (
+                    <TeamMemberCard key={teamMember.name} name={teamMember.name} info={teamMember.info} />
+                ))}
+            </div>
+        </main>
     )
 }
