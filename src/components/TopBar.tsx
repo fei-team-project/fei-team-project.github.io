@@ -72,7 +72,7 @@ export default function TopBar() {
             <div
                 id='mobile-menu'
                 ref={mobileMenu}
-                className={`sm:hidden fixed right-0 top-14 bottom-0 z-10 w-1/2 p-5 bg-white shadow ${isMobileMenuShown ? 'left-1/2' : 'left-full'} duration-300`}
+                className={`sm:hidden fixed right-0 top-14 bottom-0 z-10 min-w-[280px] max-w-1/2 p-5 bg-white shadow ${isMobileMenuShown ? 'translate-x-0' : 'translate-x-full'} transition duration-[300ms]`}
             >
                 <nav className='flex flex-col gap-5'>
                     {navLinks.map((link) => (
