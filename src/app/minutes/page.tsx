@@ -9,7 +9,8 @@ export default function MinutesPage() {
         { date: '21.10.2024', path: '/minutes/minutes-2024-10-21.pdf' },
         { date: '28.10.2024', path: '/minutes/minutes-2024-10-28.pdf' },
         { date: '4.11.2024', path: '/minutes/minutes-2024-11-04.pdf' },
-        { date: '11.11.2024', path: '/minutes/minutes-2024-11-11.pdf' }
+        { date: '11.11.2024', path: '/minutes/minutes-2024-11-11.pdf' },
+        { date: '18.11.2024', path: '/minutes/minutes-2024-11-18.pdf' }
     ]
 
     return (
