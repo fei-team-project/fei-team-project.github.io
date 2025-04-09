@@ -20,7 +20,8 @@ export default function MinutesPage() {
         { date: '05.03.2025', path: '/minutes/minutes-2025-03-05.pdf' },
         { date: '12.03.2025', path: '/minutes/minutes-2025-03-12.pdf' },
         { date: '19.03.2025', path: '/minutes/minutes-2025-03-19.pdf' },
-        { date: '24.03.2025', path: '/minutes/minutes-2025-03-24.pdf' }
+        { date: '24.03.2025', path: '/minutes/minutes-2025-03-24.pdf' },
+        { date: '24.03.2025', path: '/minutes/minutes-2025-04-02.pdf' }
     ]
 
     return (
