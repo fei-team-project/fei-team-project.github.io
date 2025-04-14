@@ -4,11 +4,11 @@ import PageTitle from '@/components/PageTitle'
 export default function MinutesPage() {
     const minutes = [
         { date: '30.09.2024', path: '/minutes/minutes-2024-09-30.pdf' },
-        { date: '7.10.2024', path: '/minutes/minutes-2024-10-07.pdf' },
+        { date: '07.10.2024', path: '/minutes/minutes-2024-10-07.pdf' },
         { date: '14.10.2024', path: '/minutes/minutes-2024-10-14.pdf' },
         { date: '21.10.2024', path: '/minutes/minutes-2024-10-21.pdf' },
         { date: '28.10.2024', path: '/minutes/minutes-2024-10-28.pdf' },
-        { date: '4.11.2024', path: '/minutes/minutes-2024-11-04.pdf' },
+        { date: '04.11.2024', path: '/minutes/minutes-2024-11-04.pdf' },
         { date: '11.11.2024', path: '/minutes/minutes-2024-11-11.pdf' },
         { date: '18.11.2024', path: '/minutes/minutes-2024-11-18.pdf' },
         { date: '25.11.2024', path: '/minutes/minutes-2024-11-25.pdf' },
@@ -21,7 +21,8 @@ export default function MinutesPage() {
         { date: '12.03.2025', path: '/minutes/minutes-2025-03-12.pdf' },
         { date: '19.03.2025', path: '/minutes/minutes-2025-03-19.pdf' },
         { date: '24.03.2025', path: '/minutes/minutes-2025-03-24.pdf' },
-        { date: '02.04.2025', path: '/minutes/minutes-2025-04-02.pdf' }
+        { date: '02.04.2025', path: '/minutes/minutes-2025-04-02.pdf' },
+        { date: '09.04.2025', path: '/minutes/minutes-2025-04-09.pdf' },
     ]
 
     return (
