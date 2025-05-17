@@ -26,6 +26,7 @@ export default function MinutesPage() {
         { date: '16.04.2025', path: '/minutes/minutes-2025-04-16.pdf' },
         { date: '23.04.2025', path: '/minutes/minutes-2025-04-23.pdf' },
         { date: '30.04.2025', path: '/minutes/minutes-2025-04-30.pdf' },
+        { date: '07.05.2025', path: '/minutes/minutes-2025-05-07.pdf' },
     ]
 
     return (
